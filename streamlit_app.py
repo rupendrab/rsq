@@ -56,7 +56,7 @@ selected_date = st.date_input("Enter a date", None, min_value=min_date)
 
 sleep_time = 0.5
 
-default_col_count = 4
+default_col_count = 1
 col_count = st.radio("Choose number of columns for output", [1,2,3,4], index=default_col_count-1)
 
 if selected_date is not None:
