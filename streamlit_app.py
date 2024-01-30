@@ -21,7 +21,7 @@ def create_ra_matrix(dt: datetime):
 
 styles = [
     "<style>",
-    "td.highlight {background-color: yellow}",  
+    "td.highlight {background-color: yellow; color: blue}",  
     "</style>"
 ]
 css = "\n".join(styles)
@@ -56,7 +56,8 @@ selected_date = st.date_input("Enter a date", None, min_value=min_date)
 
 sleep_time = 0.5
 
-col_count = 4
+default_col_count = 4
+col_count = st.radio("Choose number of columns for output", [1,2,3,4], index=default_col_count-1)
 
 if selected_date is not None:
     matrix = create_ra_matrix(selected_date)
