@@ -21,7 +21,7 @@ def create_ra_matrix(dt: datetime):
 
 styles = [
     "<style>",
-    "td.highlight {background-color: yellow; color: blue}",  
+    "td.highlight {background-color: blue; color: white}",  
     "</style>"
 ]
 css = "\n".join(styles)
@@ -94,7 +94,7 @@ if selected_date is not None:
         html = to_html(df, highlight_cells=highlight_cells)
         col.markdown(html, unsafe_allow_html=True)
         sum_val = get_sum(highlight_cells)
-        col.caption(f"Sum = {sum_val}")
+        col.markdown(f"**Sum = {sum_val}**")
         time.sleep(sleep_time)
         curcol = next_col(curcol)
         return curcol
