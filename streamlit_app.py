@@ -45,10 +45,10 @@ def to_html(df: pd.DataFrame, highlight_cells = None):
 # Set a default date
 default_date = datetime.today()
 
-st.set_page_config(page_title="Ramanujam's Magic Square")
-st.header("Ramanujam's Magic Square")
+st.set_page_config(page_title="Ramanujan's Magic Square")
+st.header("Ramanujan's Magic Square")
 st.subheader('Create a magic square for any date')
-st.markdown("*Use Ramanujam's birthdate 1887/12/22 to get his original magic square...*")
+st.markdown("*Use Ramanujan's birthdate 1887/12/22 to get his original magic square...*")
 
 # Create a date input widget
 min_date = datetime(1800, 1, 1)
